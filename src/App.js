@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BiSearchAlt } from "react-icons/bi";
+import { WiHumidity, WiThermometer, WiWindy } from "react-icons/wi";
 
 function App() {
   const API_KEY = "8e662ccf2d270d1e801dde706b54c990";
@@ -46,17 +47,29 @@ function App() {
 
               {data.main ? (
                 <div className="city_data">
-                  <h1 className="city_info">
-                    Temperatura&nbsp;
-                    <span>{Math.trunc(data.main.temp)}°C</span>
-                  </h1>
-                  <h1 className="city_info">
-                    Humedad&nbsp;<span>{Math.trunc(data.main.humidity)} %</span>
-                  </h1>
-                  <h1 className="city_info">
-                    Viento&nbsp;
-                    <span>{Math.trunc(data.wind.speed * 3.6)} KM/H</span>
-                  </h1>
+                  <div className="city_container">
+                    <WiThermometer className="weatherIcon iconTemp" />
+                    <h1 className="city_info">
+                      {Math.trunc(data.main.temp)}
+                      <sup>°C</sup>
+                    </h1>
+                  </div>
+                  <hr className="lineW" />
+                  <div className="city_container">
+                    <WiHumidity className="weatherIcon" />
+                    <h1 className="city_info hum">
+                      {Math.trunc(data.main.humidity)}
+                      <sup>%</sup>
+                    </h1>
+                  </div>
+                  <hr className="lineW" />
+                  <div className="city_container">
+                    <WiWindy className="weatherIcon" />
+                    <h1 className="city_info vien">
+                      {Math.trunc(data.wind.speed * 3.6)}
+                      <sup>k</sup>
+                    </h1>
+                  </div>
                 </div>
               ) : null}
               {data.main ? (
@@ -72,10 +85,10 @@ function App() {
           <div className="welcome">
             <div className="welcome__content">
               <h1>DOD</h1>
+              <hr className="line" />
               <span>
-                Ingrese una ciudad valida
-                <br />
-                en el buscador.
+                Ingrese el nombre de una ciudad en el buscador para ver los
+                datos del dia.
               </span>
             </div>
           </div>

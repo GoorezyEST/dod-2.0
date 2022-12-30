@@ -97,20 +97,47 @@
   justify-content: center;
   padding: 1rem 2rem;
   border-radius: 1rem;
+  width: 25%;
 }
 
 .welcome__content h1 {
   color: rgba(236, 110, 76, 1);
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 2.5rem;
+  font-weight: 600;
   margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .welcome__content span {
   color: rgb(255, 255, 255);
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line {
+  width: 75%;
+  border: none;
+  outline: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+.lineW {
+  width: 75%;
+  border: none;
+  outline: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin: 0;
 }
 
 .weather {
@@ -142,22 +169,51 @@
   color: rgba(236, 110, 76, 1);
   font-size: 2rem;
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hum {
+  margin-top: 0.5rem;
+}
+
+.vien {
+  margin-top: 0.5rem;
 }
 
 .city_info {
-  color: rgba(255, 255, 255);
+  color: rgba(236, 110, 76, 1);
+  font-weight: 500;
   font-size: 1.5rem;
   font-family: "Calibri", sans-serif;
-  font-weight: 400;
-  margin: 0.2rem 0 0 0;
+  margin-left: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.city_info span {
-  color: rgba(236, 110, 76, 1);
-  font-weight: 400;
-  font-size: 1.5rem;
-  margin: 0;
+.city_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weatherIcon {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  margin-right: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.iconTemp {
+  margin-top: 0.3rem;
 }
 
 .city_data {
@@ -186,6 +242,10 @@
   font-size: 0.8rem;
   transition: color 0.2s;
   font-weight: 300;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .bot p:hover {
@@ -200,22 +260,42 @@
   .searchIcon {
     right: 9%;
   }
-}
 
-@media screen and (max-width: 524px) {
+  .welcome__content {
+    width: 40%;
+  }
+
   .welcome__content h1 {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .welcome__content span {
-    display: none;
+    font-size: 1rem;
+    font-weight: 300;
   }
 
-  .welcome__content {
-    width: max-content;
-    height: max-content;
-    padding: 1.2rem;
+  .city_name {
+    color: rgba(236, 110, 76, 1);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .hum {
+    margin-top: 0.25rem;
+  }
+
+  .vien {
+    margin-top: 0.25rem;
+  }
+
+  .city_info {
+    color: rgba(236, 110, 76, 1);
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: "Calibri", sans-serif;
+    margin-left: 0.25rem;
   }
 }
 
@@ -233,28 +313,53 @@
   .bot p:not(:first-child) {
     display: none;
   }
+
+  .welcome__content h1 {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  .welcome__content span {
+    font-size: 0.6rem;
+    font-weight: 300;
+  }
 }
 
 @media screen and (max-width: 836px) {
   .weather__content {
     width: max-content;
-    padding: 1rem 1.6rem 0 1.6rem;
+    padding: 1rem 2rem 0 2rem;
   }
 }
 
 @media screen and (max-width: 340px) {
   .city_name {
+    color: rgba(236, 110, 76, 1);
     font-size: 1.5rem;
     font-weight: 600;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .hum {
+    margin-top: 0.25rem;
+  }
+
+  .vien {
+    margin-top: 0.25rem;
   }
 
   .city_info {
+    color: rgba(236, 110, 76, 1);
+    font-weight: bold;
     font-size: 1rem;
-    font-weight: 400;
+    font-family: "Calibri", sans-serif;
+    margin-left: 0.25rem;
   }
 
-  .city_info span {
-    font-size: 1rem;
+  .weatherIcon {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    margin-right: 0.25rem;
   }
 
   .icon {
@@ -262,26 +367,10 @@
   }
 }
 
-@media screen and (max-width: 220px) {
-  .weather__content {
-    padding: 0.75rem 1.3rem 0 1.3rem;
-  }
-
+@media screen and (max-width: 260px) {
   .city_name {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
-  }
-
-  .city_info {
-    font-size: 0.75rem;
-    font-weight: 400;
-  }
-
-  .city_info span {
-    font-size: 0.75rem;
-  }
-
-  .icon {
-    width: 25px;
+    margin-bottom: 0.25rem;
   }
 }
