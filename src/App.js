@@ -3,7 +3,7 @@ import "./App.css";
 import { BiSearchAlt } from "react-icons/bi";
 
 function App() {
-  const API_KEY = "14a63d07773ee5bf37ef4709622929f1";
+  const API_KEY = "8e662ccf2d270d1e801dde706b54c990";
 
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
